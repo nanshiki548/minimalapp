@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{url_for('crud.static', filename ='style.css')}}" />
-    <title>ユーザーの一覧</title>
-</head>
-<body>
+{% extends "crud/base.html" %}
+{%block title%}ユーザーの一覧{% endblock %}
+{% block content %}
     <h2>ユーザーの一覧</h2>
 
     <a href="{{url_for('crud.create_user')}}">ユーザー新規作成</a>
@@ -24,5 +19,4 @@
         </tr>
         {% endfor %}
     </table>
-</body>
-</html>
+{% endblock %}
